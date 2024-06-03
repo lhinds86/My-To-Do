@@ -2,8 +2,12 @@
 This is a simple TO-DO list web application that allows users to manage their tasks efficiently. Users can add, delete, and mark tasks as completed.
 
 ## WireFrame
+#### Desktop/Large
 ![ERD Image](./assets/todo-Wireframe.png)
+#### Tablet/Medium
 
+#### Mobile/Small
+![ERD Image](./assets/todo-Mobile-Wireframe.png)
 ## ERD
 ![ERD Image](./assets/toDo-ERD2.png)
 
