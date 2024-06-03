@@ -4,8 +4,6 @@ This is a simple TO-DO list web application that allows users to manage their ta
 ## WireFrame
 #### Desktop/Large
 ![ERD Image](./assets/todo-Wireframe.png)
-#### Tablet/Medium
-
 #### Mobile/Small
 ![ERD Image](./assets/todo-Mobile-Wireframe.png)
 ## ERD
