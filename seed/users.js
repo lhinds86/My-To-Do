@@ -1,11 +1,11 @@
 const db = require('../db')
-const { Task } = require('../models')
+const { User } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB Connection Error'))
 
 const resetCollections = async () => {
   try {
-      await Task.deleteMany({})
+      await User.deleteMany({})
       console.log('All collection reset');
   } catch (error) {
       console.error('Error resetting collections:', error);
@@ -15,12 +15,12 @@ const resetCollections = async () => {
 const main = async () => {
   await resetCollections()
 
-  const tasks = [
+  const users = [
 
   ]
 
-  await Task.insertMany(tasks)
-  console.log('Created Task')
+  await User.insertMany(users)
+  console.log('Created User')
 }
 
 const run = async () => {

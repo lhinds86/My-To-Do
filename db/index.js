@@ -7,4 +7,4 @@ mongoose
 
   const db = mongoose.connection
 
-  module.export = db
+  module.exports = db
