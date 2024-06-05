@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/client/style.css">
+  <script defer src="/client/script.js"></script>
+  <title>My ToDo App</title>
+</head>
+<body>
+  <div class="mainContainer">
+    <!-- Welcome User -->
+    <div class="header">
+      <h2 id="welcomeUser">Welcome, Leon</h2>
+    </div>
+    <!-- Calender -->
+    <div class="calContainer">
+      <div class="calendar">
+        <header>
+          <pre class="left">◀</pre>
+          <div class="header-display">
+            <p class="display">""</p>
+          <pre class="right">▶</pre>
+        </header>
+    
+        <div class="week">
+          <div>Su</div>
+          <div>Mo</div>
+          <div>Tu</div>
+          <div>We</div>
+          <div>Th</div>
+          <div>Fr</div>
+          <div>Sa</div>
+        </div>
+        <div class="days"></div>
+      </div>
+      <div class="display-selected">
+        <p class="selected"></p>
+      </div>
+    </div>
+    
+    <!-- Project Directory -->
+    <div class="taskContainer">
+      <h2 class="header">My To Do List</h2>
+      <ul id="myUL">
+        <li>Hit the gym</li>
+        <li>Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+      </ul>
+
+      <div id="myDIV">
+        <input type="text" id="myInput" placeholder="Create Task">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <!-- <div id="notes">
+      <textarea id="notes" placeholder="Notes" rows="4"></textarea>
+    </div> -->
+  </div>
+</body>
+</html>
