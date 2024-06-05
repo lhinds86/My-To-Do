@@ -8,21 +8,20 @@
   <title>My ToDo App</title>
 </head>
 <body>
+  <!-- Welcome User -->
+  <div class="wel-header">
+    <h2 id="welcomeUser">Welcome, Leon</h2>
+  </div>
   <div class="mainContainer">
-    <!-- Welcome User -->
-    <div class="header">
-      <h2 id="welcomeUser">Welcome, Leon</h2>
-    </div>
     <!-- Calender -->
     <div class="calContainer">
       <div class="calendar">
         <header>
           <pre class="left">◀</pre>
-          <div class="header-display">
+          <div class="header-display"></div>
             <p class="display">""</p>
           <pre class="right">▶</pre>
         </header>
-    
         <div class="week">
           <div>Su</div>
           <div>Mo</div>
@@ -38,17 +37,14 @@
         <p class="selected"></p>
       </div>
     </div>
-    
+
     <!-- Project Directory -->
     <div class="taskContainer">
-      <h2 class="header">My To Do List</h2>
+      <h2 class="task-header">Task</h2>
       <ul id="myUL">
-        <li>Hit the gym</li>
-        <li>Pay bills</li>
-        <li>Meet George</li>
-        <li>Buy eggs</li>
-        <li>Read a book</li>
-        <li>Organize office</li>
+        <li>Create Html <span>Due 6/21/24</span></li>
+        <li>Create CSS <span>Due 6/06/24</span></li>
+        <li>Create JS <span>Due 6/01/24</span></li>
       </ul>
 
       <div id="myDIV">
@@ -56,11 +52,35 @@
         <span onclick="newElement()" class="addBtn">Add</span>
       </div>
     </div>
+  </div>
+  <div class="secondContainer">
+    <!-- WEATHER -->
+    <div class="weatherContainer">
+      <!-- <h2 class="weather-header"> My Weather</h2> -->
+      <div id="location" class="weather-header">Atlanta, GA</div>
+      <div class="weather-info">
+        <div class="">
+          <img id="imgContainer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSazUen3N35KIzLnahp3t1Uw9FarPneL1nvTw&s" width="50px">
+          <div id="description">Sunny</div>
+        </div> 
 
-    <!-- Notes -->
-    <!-- <div id="notes">
-      <textarea id="notes" placeholder="Notes" rows="4"></textarea>
-    </div> -->
+        <input id="cityInput" type="text" placeholder="enter city here" />
+        <button class="submitBtn" id="submitButton">Submit</button>
+
+        
+        
+        <div>
+          <div id="temperature">Temp: 82</div>
+          <div id="feelsLike">Feels Like: 78</div>
+        </div>   
+      </div>
+    </div>
+    <!-- NOTES -->
+    <div class="noteContainer">
+      <h2 class="note-header">Notes</h2>
+      <textarea id="notes" placeholder="NOTES" rows="12"></textarea>
+      <button  class="submitBtnNotes" id="save-notes">Save Notes</button>
+    </div>
   </div>
 </body>
 </html>
