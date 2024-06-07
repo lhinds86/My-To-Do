@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/client/style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="/client/script.js"></script>
+  <script defer src="/client/weatherScript.js"></script>
   <title>My ToDo App</title>
 </head>
 <body>
@@ -38,13 +40,13 @@
       </div>
     </div>
 
-    <!-- Project Directory -->
+    <!-- TASK SECTION -->
     <div class="taskContainer">
-      <h2 class="task-header">Task</h2>
+      <h3 class="task-header">Task</h3>
       <ul id="myUL">
-        <li>Create Html <span>Due 6/21/24</span></li>
-        <li>Create CSS <span>Due 6/06/24</span></li>
-        <li>Create JS <span>Due 6/01/24</span></li>
+        <!-- <li>Create Html</li>
+        <li>Create CSS</li>
+        <li>Create JS</li> -->
       </ul>
 
       <div id="myDIV">
@@ -56,29 +58,28 @@
   <div class="secondContainer">
     <!-- WEATHER -->
     <div class="weatherContainer">
-      <!-- <h2 class="weather-header"> My Weather</h2> -->
-      <div id="location" class="weather-header">Atlanta, GA</div>
+      <div id="location" class="weather-header">Weather</div>
       <div class="weather-info">
-        <div class="">
-          <img id="imgContainer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSazUen3N35KIzLnahp3t1Uw9FarPneL1nvTw&s" width="50px">
-          <div id="description">Sunny</div>
+        <div class="weather-description">
+          <img id="imgContainer" src="">
+          <div id="description"></div>
+          <div id="temperature"></div>
+          <div id="feelsLike"></div>
         </div> 
+
+        <!-- <div class="weather-descriptionR">
+          <div id="temperature"></div>
+          <div id="feelsLike"></div>
+        </div>  -->
 
         <input id="cityInput" type="text" placeholder="enter city here" />
         <button class="submitBtn" id="submitButton">Submit</button>
-
-        
-        
-        <div>
-          <div id="temperature">Temp: 82</div>
-          <div id="feelsLike">Feels Like: 78</div>
-        </div>   
       </div>
     </div>
     <!-- NOTES -->
     <div class="noteContainer">
       <h2 class="note-header">Notes</h2>
-      <textarea id="notes" placeholder="NOTES" rows="12"></textarea>
+      <textarea id="notes" placeholder="NOTES" rows="9"></textarea>
       <button  class="submitBtnNotes" id="save-notes">Save Notes</button>
     </div>
   </div>

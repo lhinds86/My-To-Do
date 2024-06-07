@@ -1,50 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
-
+/**********GLOBAL**********/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f4f4f4;
+  background: rgb(0,24,255);
+  background: linear-gradient(
+    180deg, 
+    rgba(0,24,255,1) 0%, 
+    rgba(0,0,0,1) 100%);
+  height: 100vh;
 }
-
 :root {
-  --primary-color: #0008ff;
+  --primary-color: #0008ffad;
   --secondary-color: #0041ff;
   --hover-bg-color: #73c0fe;
   --hover-text-color: rgb(25, 25, 201);
-  --task-bg-color: #59befde6;
+  --task-bg-color: #59befd0f;
   --task-bg-alt-color: #15a5ffe6;
   --task-hover-bg-color: #007BFFE6;
   --task-checked-color: #91e0ff;
   --checked-border-color: #006a05;
-  --button-bg-color: #006a05;
-  --button-hover-bg-color: #009e08;
+  --button-bg-color: #006a056d;
+  --button-hover-bg-color: #009e08cf;
   --border-color: #033eff;
   --close-bg-color: #f44336;
 }
-
 .mainContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 50px 50px 0 50px;
+  margin: 20px 50px 0 50px;
 }
 .secondContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 40px 50px 0 25px;
+  margin: 80px 50px 0 50px;
 }
+
 /**********HEADER STYLES**********/
 .wel-header {
   display: block;
-  background-color: var(--primary-color);
+  background-color: #ffffff00;
   padding: 40px 30px;
   color: white;
   /* text-align: center; */
@@ -53,11 +56,11 @@ body {
 /**********CALENDAR STYLES**********/
 .calContainer {
   width: 25%;
-  background-color: #eaedf0;
+  background-color: #eaedf00c;
   border-radius: 35px;
+  box-shadow: 5px 10px #0000002d
   /* margin-top: 2em; */
 }
-
 header {
   margin: 5px;
   display: flex;
@@ -65,19 +68,16 @@ header {
   align-items: center;
   padding: 10px;
 }
-
 .header-display {
   display: flex;
   align-items: center;
 }
-
 .header-display p {
   color: var(--secondary-color);
   margin: 5px;
   font-size: 1.2rem;
   word-spacing: 0.5rem;
 }
-
 pre {
   padding: 10px;
   margin: 0;
@@ -85,7 +85,6 @@ pre {
   font-size: 1.2rem;
   color: var(--secondary-color);
 }
-
 .days,
 .week {
   display: grid;
@@ -104,22 +103,19 @@ pre {
   width: 2em;
   border-radius: 100%;
 }
-
 .days div:hover {
   background: var(--hover-bg-color);
   color: var(--hover-text-color);
   cursor: pointer;
+  box-shadow: 2px 5px #0000002d;
 }
-
 .week div {
   opacity: 0.5;
 }
-
 .current-date {
   background-color: var(--secondary-color);
   color: #FFF;
 }
-
 .display-selected {
   margin-bottom: 5px;
   padding: 10px 10px;
@@ -130,24 +126,23 @@ pre {
 .taskContainer {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   margin-left: 2%;
-  /* text-align: center; */
 }
 
 .task-header {
   background-color: var(--primary-color);
-  padding: 20px 30px;
-  color: white;
+  padding: 2px 3px;
+  color: #eaedf0;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 200;
+  border-radius: 10px 10px 0 0px;
 }
-
 ul {
   margin: 0;
   padding: 0;
 }
-
 ul li {
   cursor: pointer;
   position: relative;
@@ -157,25 +152,18 @@ ul li {
   transition: 0.2s;
   user-select: none;
   list-style-type: none;
+  box-shadow: 5px 10px #0000002d;
 }
-
-ul li span {
-  margin-left: 300px;
-}
-
 ul li:nth-child(odd) {
   background: var(--task-bg-alt-color);
 }
-
 ul li:hover {
   background: var(--task-hover-bg-color);
 }
-
 ul li.checked {
   color: var(--task-checked-color);
   text-decoration: line-through;
 }
-
 ul li.checked::before {
   content: '';
   position: absolute;
@@ -188,33 +176,31 @@ ul li.checked::before {
   height: 15px;
   width: 7px;
 }
-
 .close {
   position: absolute;
   right: 0;
   top: 0;
   padding: 12px 16px 12px 16px;
 }
-
 .close:hover {
   background-color: var(--close-bg-color);
   color: white;
 }
-
-input {
+#myInput {
   margin: 30px 0 0 0;
   border: 1px solid var(--border-color);
   border-radius: 2px 0 0 2px;
-  width: 75%;
+  width: 90%;
   padding: 10px;
   float: left;
   font-size: 16px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 5px 10px #0000002d;
 }
-
 .addBtn {
   margin: 30px 0 0 0;
   padding: 7px;
-  width: 25%;
+  width: 10%;
   background: var(--button-bg-color);
   color: #ffffff;
   float: left;
@@ -224,8 +210,8 @@ input {
   transition: 0.3s;
   border: 1px solid var(--border-color);
   border-radius: 0;
+  box-shadow: 5px 10px #0000002d;
 }
-
 .addBtn:hover {
   background-color: var(--button-hover-bg-color);
 }
@@ -235,9 +221,13 @@ input {
   display: flex;
   flex-direction: column;
   width: 25%;
-  margin-left: 2%;
   
-  text-align: center;
+  /* text-align: center; */
+}
+img#imgContainer {
+  display: flex;
+  margin: 0 auto;
+  width: 90px;
 }
 .weather-header {
   background-color: var(--primary-color);
@@ -245,18 +235,33 @@ input {
   color: white;
   text-align: center;
   font-size: 2rem;
+  font-weight: 300;
   border-radius:20px 20px 0 0;
 }
-
 .weather-info {
-  background-color: black;
+  background-color: #008cff1e;
   color: white;
   padding: 30px;
   border-radius: 0 0 20px 20px;
 }
 #cityInput {
-  margin: 10px 0 20px 0 ;
+  margin: 10px 0 0 0;
+  border: 1px solid var(--border-color);
+  border-radius: 2px 0 0 2px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 5px 10px #0000002d;
 }
+.weather-description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #adadad;
+}
+
 .submitBtn {
   margin: 10px 0 20px 0;
   padding: 10px;
@@ -270,27 +275,42 @@ input {
   transition: 0.3s;
   border: 1px solid var(--border-color);
   border-radius: 0;
+  box-shadow: 5px 10px #0000002d;
 }
-
+.submitBtn:hover {
+  background-color: var(--button-hover-bg-color);
+}
 /* NOTES STYLE */
 .noteContainer {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin-left: 2%;
+  box-shadow: 5px 10px #00000018
   /* text-align: center; */
 }
 .note-header {
   background-color: var(--primary-color);
-  padding: 20px 30px;
+  padding: 5px 2px;
   color: white;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   border-radius:20px 20px 0 0;
+  font-weight: 200;
+}
+#notes {
+  padding: 20px;
+  font-size: 1.2rem;
+  background-color: #73bffe0f;
+  color: #cdcdcd;
+  border: none;
+}
+#notes:focus {
+  border: none;
 }
 .submitBtnNotes {
   margin: 0px 0 20px 0;
-  padding: 5px;
+  padding: 20px;
   width: 100%;
   background: var(--button-bg-color);
   color: #ffffff;
@@ -301,5 +321,9 @@ input {
   transition: 0.3s;
   border: 1px solid var(--border-color);
   border-radius: 0;
+  border: none;
 }
+.submitBtnNotes:hover {
+  background-color: var(--button-hover-bg-color);
 }
+

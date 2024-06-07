@@ -70,33 +70,35 @@ next.addEventListener("click", () => {
 
 // TASK SCRIPT
 const myTaskList = document.getElementsByTagName("LI")
-var i;
+let i;
 for (i = 0; i < myTaskList.length; i++) {
-  var span = document.createElement("SPAN")
-  var txt = document.createTextNode("\u00D7")
+  const span = document.createElement("SPAN")
+  const txt = document.createTextNode("\u00D7")
   span.className = "close"
   span.appendChild(txt)
   myTaskList[i].appendChild(span)
 }
 const close = document.getElementsByClassName("close")
-var i;
+ i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
-    var div = this.parentElement
+    let div = this.parentElement
     div.style.display = "none"
   }
 }
-const list = document.querySelector('ul');
+const list = document.querySelector('ul')
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked')
   }
 }, false)
 
+
 function newElement() {
   const li = document.createElement("li")
   const inputValue = document.getElementById("myInput").value
-  const t = document.createTextNode(inputValue);
+  const t = document.createTextNode(inputValue)
+
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!")
@@ -108,8 +110,8 @@ function newElement() {
   const span = document.createElement("SPAN")
   const txt = document.createTextNode("\u00D7")
   span.className = "close"
-  span.appendChild(txt);
-  li.appendChild(span);
+  span.appendChild(txt)
+  li.appendChild(span)
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
@@ -119,42 +121,43 @@ function newElement() {
   }
 }
 
-// WEATHER SCRIPT
-/*
-const apiKey = "94f90bba5f4647e3978132235240905"
-const button = document.querySelector('#submitButton')
-const input = document.querySelector('#cityInput').value // Search Input
-const city = document.querySelector('#location') // Search Location
-const temp = document.querySelector('#temperature')
-const imageContainer = document.querySelector('#imgContainer') // Weather Inage
-const weatherDescription = document.querySelector('#description') // Weather Description
-const tempFeelsLike = document.querySelector('#feelsLike')
 
-button.addEventListener('click', async (e)=> {
-  e.preventDefault()
-    const input = document.querySelector('#cityInput').value
-        let response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input}&aqi=no`
-        )
-       
-        // Icon Display 
-        let weatherIcon = response.data.current.condition.icon
-        imageContainer.setAttribute('src', weatherIcon)
 
-        // Weather Discription
-        let weatherDes = response.data.current.condition.text
-        weatherDescription.innerHTML = weatherDes
 
-        // Location Display
-        let locRegion = response.data.location.region
-        let locCity = response.data.location.name
-        city.innerText = 'Location: ' + locCity + ', ' + locRegion
 
-        // Temp Display
-        let cityWeather = response.data.current.temp_f
-        temp.innerHTML = 'Temp: ' + cityWeather + '&deg;F'
-        
-        let fLike = response.data.current.feelslike_f
-        tempFeelsLike.innerHTML = 'Feels Like: ' + fLike + '&deg;F'
-        
- })
- */
+// newElement('click', async (e) => {
+//   e.preventDefault()
+//     const li = document.createElement("li")
+//     const inputValue = document.getElementById("myInput").value
+//     const t = document.createTextNode(inputValue)
+
+//     let url = `http://localhost:3001/task/${inputValue}`
+//     let response = await axios.get(url)
+
+//     li.appendChild(t);
+//     if (inputValue === '') {
+//       alert("You must write something!")
+//     } else {
+//       document.getElementById("myUL").appendChild(li)
+//     }
+//     document.getElementById("myInput").value = ""
+
+//     const span = document.createElement("SPAN")
+//     const txt = document.createTextNode("\u00D7")
+//     span.className = "close"
+//     span.appendChild(txt)
+//     li.appendChild(span)
+
+//     for (i = 0; i < close.length; i++) {
+//       close[i].onclick = function() {
+//         const div = this.parentElement
+//         div.style.display = "none"
+//       }
+//     }
+// })
+
+
+
+
+
+
