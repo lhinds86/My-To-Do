@@ -1,5 +1,5 @@
 // CALENDAR SCRIPT
-// Credit: https://code.tutsplus.com/learn-how-to-code-a-simple-javascript-calendar-and-datepicker--cms-108322t
+
 let display = document.querySelector(".display")
 let days = document.querySelector(".days")
 let previous = document.querySelector(".left")
@@ -12,8 +12,8 @@ let month = date.getMonth()
 function displayCalendar() {
   const firstDay = new Date(year, month, 1)
   const lastDay = new Date(year, month + 1, 0)
-  const firstDayIndex = firstDay.getDay(); //4
-  const numberOfDays = lastDay.getDate(); //31
+  const firstDayIndex = firstDay.getDay()
+  const numberOfDays = lastDay.getDate()
   let formattedDate = date.toLocaleString("en-US", {
     month: "long",
     year: "numeric"
@@ -39,7 +39,7 @@ function displayCalendar() {
     }
   }
 }
-// Call the function to display the calendar
+
 displayCalendar()
 previous.addEventListener("click", () => {
   days.innerHTML = ""
